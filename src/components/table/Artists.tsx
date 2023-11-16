@@ -97,7 +97,7 @@ const artistRow = [artist,artist,artist,artist,artist,artist,artist];
 
 const ArtistTable = () => {
   return (
-    <div className="grid grid-cols-12 rounded text-[12px] border">
+    <div className="grid grid-cols-12 gap-y-1 rounded text-[12px] border">
       {rowHeaders.map((header, idx) => (
         <div
           key={idx}
