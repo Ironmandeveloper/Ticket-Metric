@@ -6,6 +6,7 @@ import Menu from "../ui/Menu";
 import spotifyPic from "../../assets/Spotify.png";
 import instaPic from "../../assets/Instagram.png";
 import youtubePic from "../../assets/Youtube.png";
+import React from "react";
 
 const rowHeaders = [
   {
@@ -107,9 +108,9 @@ const ArtistTable = () => {
           {header.title}
         </div>
       ))}
-      {artistRow.map((art, idx) => {
+      {artistRow.map((art,idx) => {
         return (
-          <>
+          <React.Fragment key={idx}>
             <Event event={art.event} />
             <p className="text-center">{art.ranking}</p>
             <Date date={art.date} />
@@ -125,7 +126,7 @@ const ArtistTable = () => {
               <p>{art.priceRange}</p>
             </div>
             <Actions />
-          </>
+          </React.Fragment>
         );
       })}
     </div>
