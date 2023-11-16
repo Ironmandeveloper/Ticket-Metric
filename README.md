@@ -8,12 +8,12 @@ To run the app follow the following steps:
 
 ## Install Dependencies
 
--npm install
+npm install
 or
--yarn
+yarn
 
 ## To start the project
 
--npm run dev
+npm run dev
 or
--yarn dev
+yarn dev
