@@ -7,6 +7,7 @@ import spotifyPic from "../../assets/Spotify.png";
 import instaPic from "../../assets/Instagram.png";
 import youtubePic from "../../assets/Youtube.png";
 import React from "react";
+import "./styles.css"
 
 const rowHeaders = [
   {
@@ -97,7 +98,7 @@ const artistRow = [artist,artist,artist,artist,artist,artist,artist];
 
 const ArtistTable = () => {
   return (
-    <div className="grid grid-cols-12 gap-y-1 rounded text-[12px] border">
+    <div className="artistGrid rounded text-[12px] border">
       {rowHeaders.map((header, idx) => (
         <div
           key={idx}
@@ -112,7 +113,7 @@ const ArtistTable = () => {
         return (
           <React.Fragment key={idx}>
             <Event event={art.event} />
-            <p className="text-center">{art.ranking}</p>
+            <p >{art.ranking}</p>
             <Date date={art.date} />
             <p>{art.venue}</p>
             <p>{art.city}</p>
